@@ -39,4 +39,4 @@ const Total = ({ parts }) => {
   return <b>total of {total} exercises</b>;
 };
 
-export default Course
+export default Course;
