@@ -38,7 +38,11 @@ const NewBook = ({ show, setError }) => {
   }
 
   const addGenre = () => {
-    setGenres(genres.concat(genre.charAt(0).toUpperCase() + genre.slice(1)))
+    setGenres(
+      genres.concat(
+        genre.charAt(0).toUpperCase() + genre.slice(1).toLowerCase()
+      )
+    )
     setGenre('')
   }
 
