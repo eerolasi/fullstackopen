@@ -4,7 +4,6 @@ import MaleIcon from '@mui/icons-material/Male';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import WorkIcon from '@mui/icons-material/Work';
-import HealthRatingBar from "../HealthRatingBar";
 
 import { Box, Typography } from '@mui/material';
 import { HealthCheckRating } from '../../types';
