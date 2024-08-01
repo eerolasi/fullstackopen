@@ -9,6 +9,9 @@ const patients = patients_1.default;
 const getPatients = () => {
     return patients;
 };
+const findById = (id) => {
+    return patients.find(p => p.id === id);
+};
 const getNoSsnPatient = () => {
     return patients_1.default.map(({ id, name, dateOfBirth, gender, occupation }) => ({
         id,
@@ -20,8 +23,7 @@ const getNoSsnPatient = () => {
 };
 const addPatient = (patient) => {
     const newPatient = Object.assign({ id: (0, uuid_1.v1)() }, patient);
-    console.log(newPatient);
     patients.push(newPatient);
     return newPatient;
 };
-exports.default = { getPatients, getNoSsnPatient, addPatient };
+exports.default = { getPatients, findById, getNoSsnPatient, addPatient };
