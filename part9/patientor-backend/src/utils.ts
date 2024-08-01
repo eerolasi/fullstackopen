@@ -30,7 +30,7 @@ const parseDate = (date: unknown): string => {
 
 const parseSsn = (ssn: unknown): string => {
   if (!isString(ssn)) {
-    throw new Error('Incorrent or missing name')
+    throw new Error('Incorrent or missing ssn')
   }
   return ssn
 }
@@ -44,7 +44,7 @@ const parseGender = (gender: unknown): Gender => {
 
 const parseOccupation = (occupation: unknown): string => {
   if (!isString(occupation)) {
-    throw new Error('Incorrent or missing name')
+    throw new Error('Incorrent or missing occupation')
   }
   return occupation
 }
@@ -55,7 +55,7 @@ const toNewPatient = (object: unknown): NewPatient => {
     throw new Error('Incorrect or missing data')
   }
 
-  if ('name' in object && 'dateOfBirth' in object && 'ssn' in object && 'gender' in object && 'occupation' in object && 'entries' in object) {
+  if ('name' in object && 'dateOfBirth' in object && 'ssn' in object && 'gender' in object && 'occupation' in object) {
     const newPatient: NewPatient = {
       name: parseName(object.name),
       dateOfBirth: parseDate(object.dateOfBirth),
